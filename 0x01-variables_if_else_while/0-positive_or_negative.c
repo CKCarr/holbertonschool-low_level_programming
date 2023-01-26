@@ -2,14 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
-/* betty style doc for function main goes there */
 /**
- * main - This program will assign a random number to the variable n each time it is executed. To print whether the number stored in the variable n is positive or negative.
+ * main - Complete the source code to print if it is positive negative or 0
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int n;
