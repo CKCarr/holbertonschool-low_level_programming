@@ -12,7 +12,7 @@ int main(void)
 	int n;
 	int l;
 	char str1[] = "Last digit of";
-	char str2[] = "is greater than 5";
+	char str2[] = "and is greater than 5";
 	char str3[] = "and is 0";
 	char str4[] = "and is less than 6 and not 0";
 
