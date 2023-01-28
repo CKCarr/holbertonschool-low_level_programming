@@ -2,7 +2,7 @@
 /**
 * main - Print _putchar using only putchar.
 *
-* Return 0 Always 0 is void 0 is Success
+* Return: 0 Always 0 is void 0 is Success
 */
 int main(void)
 {
