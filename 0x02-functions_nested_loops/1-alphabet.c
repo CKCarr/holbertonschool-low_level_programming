@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* main - insomnia alphabet using _putchar created to accept character type
+* print_alphabet - insomnia alphabet using _putchar accepts char as int
 *
 * Return: if void compiler defaults the return type int. expects int value
 */
