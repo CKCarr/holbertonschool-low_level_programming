@@ -2,10 +2,9 @@
 /**
 * main - insomnia alphabet using _putchar created to accept character type
 *
-*Return: if void compiler defaults the return type int. expects int value.
+* Return: if void compiler defaults the return type int. expects int value
 */
 void print_alphabet(void)
-
 {
 	char c;
 
