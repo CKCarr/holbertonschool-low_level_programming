@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* _islower - prototype
-*
-* Return: 0 if true 1 if false
+* _islower - prototype checks if lowercase
+* @c: char to be checked
+* Return: 0 if lower(true) 1 if false(upper)
 */
 int _islower(int c)
 {
