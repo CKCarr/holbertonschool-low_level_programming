@@ -2,7 +2,6 @@
 /**
 * print_last_digit - print last digit of a value
 * @d: digit to be checked
-* @ld: lastdigit of d
 * Return: value of last digit
 */
 
