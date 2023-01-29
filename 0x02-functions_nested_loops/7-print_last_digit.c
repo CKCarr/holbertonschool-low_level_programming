@@ -2,7 +2,6 @@
 /**
 * print_last_digit - entry point ,print last digit of a value
 * @d: digit to be checked
-* @ld: lastdigit of digit
 * Return: value of last digit
 */
 
@@ -14,5 +13,8 @@ int print_last_digit(int d)
 		_putchar(d + '0');
 	}
 	else
-		return (d + '0');
+	{
+		_putchar(d + '0');
+	}
+	return (0);
 }
