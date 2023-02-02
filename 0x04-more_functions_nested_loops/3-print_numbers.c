@@ -2,7 +2,7 @@
 /**
 * print_numbers - function that prints #'s 0-9 followed be newline
 *
-*@i: number to be checked
+*
 *
 *Return: 0 is success
 *
