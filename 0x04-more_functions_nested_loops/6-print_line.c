@@ -5,21 +5,17 @@
 *
 *Return: void
 */
-
 void print_line(int n)
 {
 	int v;
 
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
 	for (v = 1; v <= n; v++)
 	{
-		if (n <= 0)
-		{
-			_putchar('\n');
-		}
 		_putchar('_');
 	}
 	_putchar('\n');
 }
-
-
-
