@@ -2,7 +2,7 @@
 /**
 * print_most_numbers - print #'s 0-9 omit 2&4
 *
-*@i: int to be checked
+*
 *Return: void
 */
 void print_most_numbers(void)
