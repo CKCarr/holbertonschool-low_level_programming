@@ -4,8 +4,6 @@
 /**
 * main - Fizz Buzz test
 *
-*
-*
 * Return: void
 */
 int main(void)
@@ -32,5 +30,5 @@ int main(void)
 		}
 	}
 		putchar('\n');
-		return (0);
+	return (0);
 }
