@@ -19,7 +19,7 @@ void print_square(int size)
 		for (c = 0; c <= r; c++)
 		{
 			_putchar('#');
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
