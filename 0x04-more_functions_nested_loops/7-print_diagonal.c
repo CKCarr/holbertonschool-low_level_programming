@@ -4,22 +4,23 @@
 *
 *@n: # of times '\' should be printed
 *
-*Return: void
+* Return: void
 */
 void print_diagonal(int n)
 {
-	int v;
+	int v, h;
 
 	if (n <= 0)
 	{
 		_putchar('\n');
 	}
-	else
+	for (v = 1; v < n; v++)
 	{
-		for (v = 0; v < n; v++)
-		{
-			_putchar('\\');
-		}
+		_putchar(' ');
+	}
+	for (h = 1; h < v; h++)
+	{
+		_putchar('\\');
 		_putchar('\n');
 	}
 }
