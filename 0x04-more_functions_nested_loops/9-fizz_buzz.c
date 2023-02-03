@@ -29,7 +29,7 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
-		printf("buzz");
+		printf("Buzz");
 		putchar('\n');
 	return (0);
 }
