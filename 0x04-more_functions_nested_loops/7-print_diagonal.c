@@ -16,7 +16,7 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (v = 1; v < n; v++)
+		for (v = 0; v < n; v++)
 		{
 			_putchar('\\');
 		}
