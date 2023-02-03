@@ -3,21 +3,24 @@
 * print_line - function that draws a straight line in the terminal
 * @n: n is the # of times the char n is printed
 *
-* Return: void
+* Return: n as _ or \n
 */
 void print_line(int n)
 {
 	int v;
 
-	if (n <= 0)
+	for (v = 1; v <= n; v++)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (v = 1; v <= n; v++)
+		if (n >= 1)
 		{
 			_putchar('_');
+		}
+		else
+		{
+			if (n <= 0)
+			{
+				_putchar('\n');
+			}
 		}
 		_putchar('\n');
 	}
