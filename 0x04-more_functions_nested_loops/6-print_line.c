@@ -3,7 +3,6 @@
 * print_line - function that draws a straight line in the terminal
 * @n: n is the # of times the char n is printed
 *
-* Return: n as _ or \n
 */
 void print_line(int n)
 {
