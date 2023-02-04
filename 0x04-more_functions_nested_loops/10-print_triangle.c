@@ -18,12 +18,12 @@ void print_triangle(int size)
 	{
 		for (s = 0; s <= (size - 1) - r; s++)
 		{
-			_putchar(' ');
+			_putchar(32);
+		}
 			for (c = 0; c <= r; c++)
 			{
-				_putchar('#');
+				_putchar(35);
 			}
 			_putchar('\n');
-		}
 	}
 }
