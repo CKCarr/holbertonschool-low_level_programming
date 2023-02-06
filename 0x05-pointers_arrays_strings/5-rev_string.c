@@ -9,15 +9,24 @@
 */
 void rev_string(char *s)
 {
-	int string, count = 0;
+	char rvrs[255];
+	int str, chr;
 
-	for (string = 0; s[string] != '\0'; string++)
+	str = 0;
+	chr = 0;
+
+	if (s[chr] != '\0') /*count length of string*/
 	{
-		count++;
+		chr++;
 	}
-	for (string = count - 1; string >= 0; string--)
+	for ( ; chr > 0; chr--) /*rev original string char and store in reverse*/
 	{
-		_putchar(s[string]);
+		rvrs[str] = s[chr - 1];
+		str++;
 	}
-	_putchar('\n');
+	while (chr < str)/* replace orighinal string char with reverse string*/
+	{
+		s[chr] = rvrs[str];
+		chr++;
+	}
 }
