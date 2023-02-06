@@ -9,9 +9,14 @@
 */
 void puts2(char *str)
 {
-	int chr;
+	int chr, len;
 
-	for (chr = 0; chr < _strlen(str); chr++)
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	for (chr = 0; chr < len; chr++)
 	{
 		if (chr % 2 == 0)
 		{
