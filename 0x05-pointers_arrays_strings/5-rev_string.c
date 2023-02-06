@@ -15,18 +15,18 @@ void rev_string(char *s)
 	str = 0;
 	chr = 0;
 
-	if (s[chr] != '\0') /*count length of string*/
+	while (s[chr] != '\0') /*count length of string*/
 	{
 		chr++;
 	}
-	for ( ; chr > 0; chr--) /*rev original string char and store in reverse*/
+	for (; chr > 0; chr--) /*rev original string char and store in reverse*/
 	{
 		rvrs[str] = s[chr - 1];
 		str++;
 	}
 	while (chr < str)/* replace orighinal string char with reverse string*/
 	{
-		s[chr] = rvrs[str];
+		s[chr] = rvrs[chr];
 		chr++;
 	}
 }
