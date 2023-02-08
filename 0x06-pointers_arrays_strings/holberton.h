@@ -1,5 +1,5 @@
-#ifndef HEADER.H
-#define HEADER.H
+#ifndef HEADER_H
+#define HEADER_H
 
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
@@ -10,27 +10,6 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int _strlen();
 
 #endif
