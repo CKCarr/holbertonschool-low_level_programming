@@ -9,21 +9,14 @@
 */
 char *_strcat(char *dest, char *src)
 {
-	int size = _strlen(dest);/*max bytes to be used*/
-	int index; /* one less than size, 0-based */
-	int element; /* the members in the array */
+	int index;
+	int dest_len = _strlen(dest);
+	int src_len = _strlen(src);
 
-	for (index = 0; dest[index] != '\0'; index++)
+	for (index = 0; index <= dest_len && src[index] != '\0'; index++)
 	{
+		dest[dest_len + index] = src[index];
 	}
-
-	for (element = 0; element < size; element++)
-	{
-		dest[index + element] = src[element];
-		if (src[element] == '\0')
-		{
-			element = size;
-		}
-	}
-	return (dest);
+	dest[dest_len + src_len] = '\0';
+return (dest);
 }

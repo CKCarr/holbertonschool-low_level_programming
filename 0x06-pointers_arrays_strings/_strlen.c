@@ -6,12 +6,12 @@
 * Return: int aka '#' of chars in given string
 *
 */
-int _strlen()
+int _strlen(char *s)
 {
        	int strlen;
 
        	strlen = 0;
-       	while (strlen != '\0')
+       	while (s[strlen] != '\0')
        	{
        	       	(strlen++);
        	}
