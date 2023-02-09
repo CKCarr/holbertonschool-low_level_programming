@@ -10,8 +10,8 @@
 char *_strcat(char *dest, char *src)
 {
 	int index;
-	int destlen = _strlen(dest);
-	int srclen = _strlen(src);
+	int destlen = strlen(dest);
+	int srclen = strlen(src);
 
 	for (index = 0; index <= srclen; index++)
 	{
