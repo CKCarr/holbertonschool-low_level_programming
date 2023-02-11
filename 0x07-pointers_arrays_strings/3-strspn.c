@@ -14,12 +14,13 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (si = 0; s[si] != '\0' && s[si] != ' '; si++)
 	{
-		for (ai = 0; accept[ai] != '\0'; ai++)
+		for (ai = 0; accept[ai]; ai++)
 		{
-			if (s[si] == accept[ai])
+			for (; nb < s[si] && nb < accept[ai]; nb++)
 			{
-				nb++;
-				break;
+				if (s[nb] == accept[nb])
+				{
+				}
 			}
 		}
 	}
