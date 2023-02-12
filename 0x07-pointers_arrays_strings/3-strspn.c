@@ -22,7 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 				bytes++;
 				break;
 			}
-			else if (accept[ai] == '\0')
+			else if (accept[ai + 1] == '\0')
 			{
 				return (bytes);
 			}
