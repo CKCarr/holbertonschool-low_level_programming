@@ -10,3 +10,22 @@
 *
 */
 char *_strstr(char *haystack, char *needle)
+{
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *srch = haystack;
+		char *find = needle;
+
+		while (*srch == *find && *find != '\0')
+		{
+			srch++;
+			find++;
+		}
+
+		if (*srch == '\0')
+		{
+			return (haystack);
+		}
+	}
+	return (NULL);
+}
