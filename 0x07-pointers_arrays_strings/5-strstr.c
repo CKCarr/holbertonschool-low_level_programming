@@ -11,26 +11,17 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-	if (needle[0] == '\0')
+	int search, find;
+
+	for (search = 0; haystack[search] != '\0'; search++)
 	{
-		return (haystack);
-	}
-
-	for (; *haystack != '\0'; haystack++)
-	{
-		char *srch = haystack;
-		char *find = needle;
-
-		while (*srch == *find && *find != '\0')
+		for (find = 0; needle[find] == haystack[search + find]; ++find)
 		{
-			srch++;
-			find++;
-		}
-
-		if (*srch == '\0')
-		{
-			return (haystack);
+			if (needle[find] == '\0')
+			{
+				return (haystack + search);
+			}
 		}
 	}
-	return (NULL);
+		return ('\0');
 }
