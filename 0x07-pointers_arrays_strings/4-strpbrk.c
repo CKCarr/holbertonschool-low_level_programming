@@ -23,5 +23,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		search++;
 	}
-	return (s + i + 1);
+	return (0);
 }
