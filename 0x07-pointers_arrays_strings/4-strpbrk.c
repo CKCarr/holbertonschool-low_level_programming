@@ -10,15 +10,15 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	int search = 0;
+	int search = 0, i;
 
 	while (s[search])
 	{
-		for (search = 0; accept[search]; search++)
+		for ( i = 0; accept[i]; i++)
 		{
-			if (s[search] == accept[search])
+			if (s[search] == accept[i])
 			{
-				return (s + search - 1);
+				return (s + i - 1);
 			}
 		}
 		search++;
