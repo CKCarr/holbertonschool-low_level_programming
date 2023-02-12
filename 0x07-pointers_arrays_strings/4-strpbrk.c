@@ -19,6 +19,7 @@ char *_strpbrk(char *s, char *accept)
 			if (s[search] == accept[i])
 			{
 				return (s + i - 1);
+				break;
 			}
 		}
 		search++;
