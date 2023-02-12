@@ -4,25 +4,29 @@
 *
 * @s: string to be searched.
 * @accept: string of set chars to allow.
-* @ nb = number of bytes
+* @ bytes = number of bytes
 * Return: num of bytes of s which == bytes of set.
 *
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	int si, ai, nb;
+	unsigned int bytes = 0;
+	int si, ai;
 
-	for (si = 0; s[si] != '\0' && s[si] != ' '; si++)
+	for (si = 0; s[si]; si++)
 	{
 		for (ai = 0; accept[ai]; ai++)
 		{
-			for (; nb < s[si] && nb < accept[ai]; nb++)
+			if (s[si] == accept[ai])
 			{
-				if (s[nb] == accept[nb])
-				{
-				}
+				bytes++;
+				break;
+			}
+			else if (accept[ai] == '\0')
+			{
+				return (bytes);
 			}
 		}
 	}
-	return (nb);
+	return (bytes);
 }
