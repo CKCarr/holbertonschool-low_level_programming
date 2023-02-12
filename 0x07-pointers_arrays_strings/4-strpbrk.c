@@ -10,19 +10,17 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	int search = 0, i;
+	int search, i;
 
-	while (s[search])
+	for (search = 0; s[search]; s++)
 	{
 		for (i = 0; accept[i]; i++)
 		{
 			if (s[search] == accept[i])
 			{
-				return (s + i - 1);
-				break;
+				return (s);
 			}
 		}
-		search++;
 	}
-	return (0);
+	return ('\0');
 }
