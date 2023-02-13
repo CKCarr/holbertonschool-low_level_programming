@@ -10,11 +10,11 @@ void print_chessboard(char (*a)[8])
 {
 	int row, colmn;
 
-	for (row = 0; row <= 8; row++)
+	for (row = 0; a[row] <= 8; row++)
 	{
-		for (colmn = 0; colmn <= 8; colmn++)
+		for (colmn = 0;a[colmn] <= 8; colmn++)
 		{
-			_putchar([row][colmn]);
+			_putchar(a[row][colmn]);
 			_putchar('\n');
 		}
 	}
