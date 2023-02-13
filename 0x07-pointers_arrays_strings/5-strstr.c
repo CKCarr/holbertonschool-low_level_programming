@@ -6,28 +6,26 @@
 *
 * @needle: set string for substring to be found
 *
-* Return: pointer to beginning of substring or null if no
+* Return: pointer to beginning of substring or null if no substring
+*
 */
 char *_strstr(char *haystack, char *needle)
 {
-	int search, find, found;
-
-	for (search = 0; haystack[search] != '\0'; search++)
+	for (; *haystack != '\0'; haystack++)
 	{
-		for (find = 0; needle[find] == haystack[search + find]; find++)
+		char *srch = haystack;
+		char *find = needle;
+
+		while (*srch == *find && *find != '\0')
 		{
-			found = (haystack[search] == needle[0]);
-			if (haystack[found] == needle[find])
-			{
-				search++;
-				find++;
-				return (haystack + found);
-			}
-			if (needle[find] == '\0')
-			{
-				return (haystack + search);
-			}
+			srch++;
+			find++;
+		}
+
+		if (*find == '\0')
+		{
+			return (haystack);
 		}
 	}
-		return (0);
+	return (NULL);
 }
