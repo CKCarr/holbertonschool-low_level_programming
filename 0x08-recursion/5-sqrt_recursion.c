@@ -1,5 +1,34 @@
+#include "main.h"
+int _sqrt(int n, int i);
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
+* _sqrt_recursion - function that returns sqrt
+*
+* @n:parameter to be squared
+*
+* Return: square root of a number
+*/
+
+
+int _sqrt_recursion(int n)
+{
+	return (_sqrt(n, 1));
+}
+
+/**
+* _sqrt -recursive square root
+*
+* @n: number
+* @i: iterator
+*
+* Return: sqrt of given number
+*/
+int _sqrt(int n, int i)
+{
+	int square = i * i;
+
+	if (square > n)
+		return (-1);
+	if (square == n)
+		return (i);
+	return (_sqrt(n, i + 1));
+}
