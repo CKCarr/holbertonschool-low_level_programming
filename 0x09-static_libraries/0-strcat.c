@@ -1,4 +1,5 @@
-#include "holberton.h"
+#include "main.h"
+#include <string.h>
 /**
 * _strcat - function that concaternates two strings.
 *
