@@ -3,15 +3,17 @@
 
 
 /**
-* header file to define a macro named SIZE 
+* file: 0-object_like_macro.h
+*
+* Description: header file to define a macro named SIZE
 * to be equivalent to the value 1024
 *
-* In this way we can call the macro 
+*
 *
 */
 
 
 
-#define SIZE = 1024
+#define SIZE 1024
 
 #endif
