@@ -47,6 +47,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ccstr[size++] = s2[str_i];
 		ccstr[size] = '\0';
 	}
-
 	return (ccstr);
 }
