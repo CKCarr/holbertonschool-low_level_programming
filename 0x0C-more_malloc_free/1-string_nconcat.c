@@ -34,4 +34,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ccstr[i2] = s2[i2 - s1i];
 	ccstr[i2] = '\0';
 	return (ccstr);
-}
+
