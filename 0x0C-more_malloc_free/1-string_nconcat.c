@@ -19,10 +19,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return ("");
 	if (s2 == NULL)
 		return ("");
-	for (s1i = 0; s1[s1i] != '\0'; s1i++){
-	}
-	for (s2i = 0; s2[s2i] != '\0'; s2i++){
-	}
+	for (s1i = 0; s1[s1i] != '\0'; s1i++)
+		;
+	for (s2i = 0; s2[s2i] != '\0'; s2i++)
+		;
 	if (n >= s2i)
 		n = s2i;
 	ccstr = malloc(sizeof(char) * (s1i + n + 1));
