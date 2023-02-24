@@ -13,16 +13,16 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ccstr;
-	unsigned int s1i = 0, s2i = 0, i1, i2;
+	unsigned int s1i, s2i, i1, i2;
 
 	if (s1 == NULL)
 		return ("");
 	if (s2 == NULL)
 		return ("");
-	while (s1[s1i] != '\0')
-		s1i++;
-	while (s2[s2i] != '\0')
-		s2i++;
+	for (s1i = 0; s1[s1i] != '\0'; s1i++){
+	}
+	for (s2i = 0; s2[s2i] != '\0'; s2i++){
+	}
 	if (n >= s2i)
 		n = s2i;
 	ccstr = malloc(sizeof(char) * (s1i + n + 1));
