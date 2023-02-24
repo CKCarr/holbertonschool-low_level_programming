@@ -16,19 +16,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s1_i = 0, s2_i = 0;
 	unsigned int s1_l = 0, s2_l = 0;
 
-	if (s1 == NULL)
-	{
-		return ("");
-	}
-	if (s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return ("");
 	}
 
-	while (s1[s1_l] != '\0')
-		s1_l++;
-	while (s2[s2_l] != '\0' && s2_l < n)
-		s2_l++;
+	for (s1_l = 0; s1[s1_l] != '\0'; s1_l++)
+	{
+		for (s2_l = 0; s2[s2_l] != '\0'; s2_l++)
+		{
+			if (n >= s2_l)
+			{
+				s2_l++;
+			}
+		}
+	}
 
 	ccstr = malloc(sizeof(char) * (s1_l + s2_l + 1));
 
