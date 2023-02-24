@@ -13,25 +13,34 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ccstr;
-	unsigned int s1i, s2i, i1, i2;
+	unsigned int s1_i = 0, s2_i = 0;
+	unsigned int s1_l = 0, s2_l = 0;
 
 	if (s1 == NULL)
+	{
 		return ("");
+	}
 	if (s2 == NULL)
+	{
 		return ("");
-	for (s1i = 0; s1[s1i] != '\0'; s1i++)
-		;
-	for (s2i = 0; s2[s2i] != '\0'; s2i++)
-		;
-	if (n >= s2i)
-		n = s2i;
-	ccstr = malloc(sizeof(char) * (s1i + (n + 1)));
+	}
+
+	while (s1[s1_l] != '\0')
+		s1_l++;
+	while (s2[s2_l] != '\0' && s2_l < n)
+		s2_l++;
+
+	ccstr = (char *)malloc(s1_l + s2_l + 1);
+
 	if (ccstr == NULL)
 		return (NULL);
-	for (i1 = 0; s1[i1] != '\0'; i1++)
-		ccstr[i1] = s1[i1];
-	for (i2 = s1i; i2 < s1i + n; i2++)
-		ccstr[i2] = s2[i2 - s1i];
-	ccstr[i2] = '\0';
-	return (ccstr);
 
+	for (s1_i = 0; s1_i < s1_l; s1_i++)
+		ccstr[s1_i] = s1[s1_i];
+	for (s2_i = 0; s2_i < s2_l; s2_i++)
+		ccstr[s1_i + s2_i] = s2[s2_i];
+
+	ccstr[s1_i + s2_i] = '\0';
+
+	return (ccstr);
+}
