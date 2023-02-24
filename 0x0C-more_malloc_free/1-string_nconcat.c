@@ -42,11 +42,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ccstr[size++] = s1[str_i];
 	}
-	for (str_i = 0; s2[str_i] && str_i < n; str_i++)
+	for (str_i = 0; s2[str_i] && str_i <= n; str_i++)
 	{
 		ccstr[size++] = s2[str_i];
+		ccstr[size] = '\0';
 	}
-	ccstr[size] = '\0';
 
 	return (ccstr);
 }
