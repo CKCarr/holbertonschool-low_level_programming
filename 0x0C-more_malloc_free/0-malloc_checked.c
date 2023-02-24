@@ -14,7 +14,7 @@
 void *malloc_checked(unsigned int b)
 {
 	void *memalloc;
-	
+
 	memalloc = malloc(b);
 	if (memalloc == NULL)
 	{
