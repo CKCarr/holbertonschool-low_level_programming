@@ -13,31 +13,30 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ccstr;
-	unsigned int stri_1, stri_2, size;
+	unsigned int s1i = 0,s2i = 0, i1, i2; 
 	/*handle null pointers*/
 	if (s1 == NULL)
 		return ("");
 	if (s2 == NULL)
 		return ("");
 	/*get length of each string*/
-	for (stri_1 = 0; s1[stri_1]; stri_1++)
-		stri_1++;
-	for (stri_2 = 0; s2[stri_2]; stri_2++)
-		stri_2++;
+	while (s1[s1i] != '\0')
+		s1i++;
+	while (s2[s2i] != '\0')
+		s2i++;
 	/*if n is greater than stri_2 use whole string*/
-	if (n >= stri_2)
-		n = stri_2;
+	if (n >= s2i)
+		n = s2i;
 	/*allocate memory for the concaternated string*/
-	ccstr = malloc(sizeof(char) * (stri_1 + n + 1));
+	ccstr = malloc(sizeof(char) * (s1i + n + 1));
 	if (ccstr == NULL)
 		return (NULL);
 	/*copy concat str into ccstr*/
-	size = 0;
-	for (stri_1 = 0; s1[stri_1]; stri_1++)
-		ccstr[size++] = s1[stri_1];
-	for (stri_2 = 0; s2[stri_2] && stri_2 < n; stri_2++)
-		ccstr[size++] = s2[stri_2];
+	for (i1 = 0; s1[i1] != '\0'; i1++)
+		ccstr[i1] = s1[i1];
+	for (i2 = s1i; i2 < s1i + n; i2++)
+		ccstr[i2] = s2[i2 - s1i];
 	/*null terminate the string*/
-	ccstr[stri_1 + n] = '\0';
+	ccstr[i2] = '\0';
 	return (ccstr);
 }
