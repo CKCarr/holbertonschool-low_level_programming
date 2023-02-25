@@ -1,49 +1,43 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
-* string_nconcat - function that concaternates two strings
-*
-* @s1: char string one
-* @s2: char string two be added on to 1st.
-* @n: char bytes of s2.
-*
-* Return: pointer to new memory allocation
-*/
+ * string_nconcat - Concatenates two strings using at
+ *                  most an inputted number of bytes.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The maximum number of bytes of s2 to concatenate to s1.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - a pointer to the concatenated space in memory.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ccstr;
-	unsigned int s1_l = 0, s2_l = 0;
-	unsigned int index = 0, length = 0;
+	char *concat;
+	unsigned int len = n, index;
 
 	if (s1 == NULL)
-		return ("");
-	if (s2 == NULL)
-		return ("");
-	while (s1[s1_l])
-		s1_l++;
-	while (s2[s2_l])
-		s2_l++;
-	if (n >= s2_l)
-		length = s1_l + s2_l;
-	else
-		length = s1_l + n;
+		s1 = ("");
 
-	ccstr = malloc(sizeof(char) * length + 1);
-	if (ccstr == NULL)
+	if (s2 == NULL)
+		s2 = ("");
+
+	for (index = 0; s1[index]; index++)
+		len++;
+
+	concat = malloc(sizeof(char) * (len + 1));
+
+	if (concat == NULL)
 		return (NULL);
-	s2_l = 0;
-	while (index < length)
-	{
-		if (index <= s1_l)
-			ccstr[index] = s1[index];
-		if (index >= s1_l)
-		{
-			ccstr[index] = s2[s2_l];
-			s2_l++;
-		}
-		index++;
-	}
-	ccstr[index] = '\0';
-	return (ccstr);
+
+	len = 0;
+
+	for (index = 0; s1[index]; index++)
+		concat[len++] = s1[index];
+
+	for (index = 0; s2[index] && index < n; index++)
+		concat[len++] = s2[index];
+
+	concat[len] = '\0';
+
+	return (concat);
 }
