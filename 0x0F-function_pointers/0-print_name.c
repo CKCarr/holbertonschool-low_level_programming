@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdlib.h>
+
 /**
   * print_name - function that prints a name
   *
@@ -10,11 +11,5 @@
   */
 void print_name(char *name, void (*f)(char *))
 {
-	int index;
-
-	for (index = 0; name[index] != '\0'; index++)
-	{
-		(*f)(&name[index]);
-	}
-	(*f)("\n");
+	f(name);
 }
