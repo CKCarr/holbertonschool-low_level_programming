@@ -1,9 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
 
-#define  <stdio.h>
-#define <stdlib.h>
-
 /**
  * struct dog  - Short description
  * @age: dog age
