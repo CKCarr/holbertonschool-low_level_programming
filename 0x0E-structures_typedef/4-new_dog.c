@@ -2,28 +2,23 @@
 #include <stdlib.h>
 /**
   * new_dog - function that creates a new dog.
-  *
   * @name: name of new_dog for dog_type struct.
   * @age: age of new_dog for dog_type struct.
   * @owner: owner name of new_dog of dog_type struct.
-  *
   * Return: initialized new 'dog_t' object 'new_dog'
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int name_len = 0, owner_len = 0, index;
-	int success = 0;
+	int name_len = 0, owner_len = 0, success = 0, index;
 
 	dog_t *dog = malloc(sizeof(dog_t));
+
 	if (dog == NULL)
 	{
-		return (NULL);/*allocation failed*/
+		return (NULL);
 	}
-	/*len & memalloc & index of name string*/
 	while (name[name_len] != '\0')
-	{
 		name_len++;
-	}
 	dog->name = malloc(name_len + 1);
 	if (dog->name == NULL)
 	{
@@ -31,14 +26,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (index = 0; index <= name_len; index++)
-	{
 		dog->name[index] = name[index];
-	}
-	/*len & memalloc & index of owner string*/
 	while (owner[owner_len] != '\0')
-	{
 		owner_len++;
-	}
 	dog->owner = malloc(owner_len + 1);
 	if (dog->owner == NULL)
 	{
@@ -47,12 +37,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	for (index = 0; index <= owner_len; index++)
-	{
 		dog->owner[index] = owner[index];
-	}
 	dog->age = age;
 	success = 1;
-	/*cleanup section*/
 	if (!success)
 	{
 		free(dog->name);
