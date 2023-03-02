@@ -4,6 +4,14 @@
 #define  <stdio.h>
 #define <stdlib.h>
 
+/**
+ * struct dog  - Short description
+ * @age: dog age
+ * @name: dog name
+ * @owner: dog owner name
+ *
+ * Description: Longer description
+ */
 struct dog
 {
 	float age;
