@@ -1,4 +1,4 @@
-#ifndef CALC_H
+#ifndef 3_CALC_H
 #define CALC_H
 /*#include*/
 /*#include*/
@@ -23,4 +23,4 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
-#endif
+#endifi /*CALC_H*/
