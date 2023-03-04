@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 	int result, num1, num2;
 	int (*op_func_ptr)(int, int);
 	char *op_str;
-	printf("argc = %d\n", argc);
 
 	if (argc != 4)
 	{
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
 	op_str = argv[2];
 
 	op_func_ptr = get_op_func(op_str);
-	if (op_func_ptr == NULL)
+	if (op_func_ptr == NULL )
 	{
 		printf("Error\n");
 		exit(99);
