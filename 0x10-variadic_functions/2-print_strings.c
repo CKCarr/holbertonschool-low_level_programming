@@ -18,11 +18,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char        *string;
 	va_list      args;
 
-	if (separator == NULL)
-	{
-		return;
-	}
-
 	va_start(args, n);
 
 	for (index = 0; index < n; index++)
