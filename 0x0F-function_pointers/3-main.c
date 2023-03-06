@@ -25,17 +25,17 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op_str = argv[2];
 
-	op_func_ptr = get_op_func(op_str);
-	if (op_func_ptr == NULL )
+	if (*op_str != '+' && *op_str != '-' && *op_str != 42 && *op_str != '/' && *op_str != '%')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*op_str == '/' || *op_str == '%') && *argv[3] == '0')
+	if (((*op_str == '/') || (*op_str == '%')) && (num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	op_func_ptr = get_op_func(op_str);
 	result = op_func_ptr(num1, num2);
 	printf("%d\n", result);
 	return (0);
