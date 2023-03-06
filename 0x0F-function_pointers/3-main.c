@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op_str = argv[2];
 
-	if (*op_str != '+' && *op_str != '-' && *op_str != 42 && *op_str != '/' && *op_str != '%')
+	op_func_ptr = get_op_func(op_str);
+	if ((argv[2] == NULL) || (*op_str != '+' && *op_str != '-' && *op_str != 42 && *op_str != '/' && *op_str != '%'))
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,7 +36,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	op_func_ptr = get_op_func(op_str);
 	result = op_func_ptr(num1, num2);
 	printf("%d\n", result);
 	return (0);
