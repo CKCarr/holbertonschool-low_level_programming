@@ -1,21 +1,16 @@
 #include "variadic_functions.h"
-#include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 /**
 * print_all - functon that prints anything
-*
 * @format: list of types of arguments(args)
-*
 * Return: void
 */
 void print_all(const char * const format, ...)
 {
 	va_list arglist;
-	int f_len = 0, f_index = 0;
-	int i;
-	char *sep = ", ";
-	char c, *string;
+	int f_len = 0, f_index = 0, i;
+	char c, *string, *sep = ", ";
 	float f;
 
 	va_start(arglist, format);
