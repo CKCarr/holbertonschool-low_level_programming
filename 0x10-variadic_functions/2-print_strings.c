@@ -25,14 +25,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		string = va_arg(args, char *);
 		if (string == NULL)
 		{
-			printf("nil");
+			printf("(nil)");
 		}
-		else
-		{
 			printf("%s", string);
-		}
 
-		if (index != (n - 1) && separator != NULL)
+		if (index != (n - 1))
 		{
 			printf("%s", separator);
 		}
