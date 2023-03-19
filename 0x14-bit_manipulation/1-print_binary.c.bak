@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 	}
 	mask = 1UL << ((sizeof(unsigned long int) * 8) - 1);
 
-	while ((mask & n) == 0)
+	while ((mask& n) == 0)
 	{
 		mask >>= 1;
 	}
