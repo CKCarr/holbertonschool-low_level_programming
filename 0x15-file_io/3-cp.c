@@ -28,7 +28,8 @@ int open_file(char *filename, int flags, int mode)
 
 	if (fd == -1)
 	{
-		handle_error("Error: Can't open file %s\n", filename, 98);
+		dprintf(STDERR_FILENO,"Error: Can't open file %s\n", filename);
+		exit(98);
 	}
 	return (fd);
 }
@@ -52,20 +53,24 @@ void copy_file(char *src_file, char *dest_file, char **argv)
 		fd_WR = write(fd_to, buffer, fd_RD);
 		if (fd_WR == -1)
 		{
-			handle_error("Error: Can't write to file %s\n", dest_file, 99);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", dest_file);
+			exit(99);
 		}
 	}
 	if (fd_RD == -1)
 	{
-		handle_error("Error: Can't read from file %s\n", src_file, 98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src_file);
+		exit(98);
 	}
 	if (close(fd_from) == -1)
 	{
-		handle_error("Error: Can't close fd %d\n", argv[1], 100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[1]);
+		exit(100);
 	}
 	if (close(fd_to) == -1)
 	{
-		handle_error("Error: Can't close fd %d\n", argv[2], 100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
+		exit(100);
 	}
 }
 
