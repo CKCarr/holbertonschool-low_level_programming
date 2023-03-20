@@ -46,12 +46,12 @@ int main(int argc, char *argv[])
 	}
 	if (close(fd_from) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", fd_from);
+		dprintf(2, "Error: Can't close fd %d\n", fd_from);
 		exit(100);
 	}
 	if (close(fd_to) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", fd_to);
+		dprintf(2, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
 	return (0);
