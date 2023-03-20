@@ -1,6 +1,23 @@
 #include "main.h"
 #define BUFFER_SIZE 1024
 /**
+  * open_file - function to open a new file.
+  * @filename: name of file to open.
+  * @flags: used when call to open for specific options
+  * @mode: sets permissions for file.
+  * Return: int value of file descriptor indicating open file.
+  */
+int open_file(char *filename, int flags, int mode)
+{
+        int fd = open(filename, flags, mode);
+
+        if (fd == -1)
+        {
+                handle_error("Error: Can't open file %s\n", filename, 98);
+        }
+        return (fd);
+}
+/**
 * main - Write a program that copies the content
 *       of a file to another file.
 * @argc: # of args passed to function.
@@ -53,6 +70,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
 		exit(100);
 	}
-
 	return (0);
 }
