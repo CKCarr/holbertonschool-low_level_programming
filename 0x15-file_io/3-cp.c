@@ -28,7 +28,7 @@ int open_file(char *filename, int flags, int mode)
 
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't open file %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
 		exit(98);
 	}
 	return (fd);
