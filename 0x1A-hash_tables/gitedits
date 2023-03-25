@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Ask user for commit message
+read -p "Enter commit message: " message
+
+# Add all changes to staging area
+# Next only adds the files that are previously created and makes chages to those with the following commit message.
+# Commit changes with custom message
+git commit -am "$message"
+
+# Push changes to remote repository
+git push
